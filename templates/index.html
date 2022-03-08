@@ -1,0 +1,13 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}"/>
+
+<h1>
+    Social Distance Detection!!
+</h1>
+
+<p>Kindly upload the file </p>
+<form method="GET" action="download">
+    {% csrf_token %}
+    <input type="file" id="myFile" name="file">
+    <button type="submit">Download!</button>
+</form>
